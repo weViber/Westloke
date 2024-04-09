@@ -1,3 +1,5 @@
+import { tweedfreak, westlokeamps, westlokemusicEmail } from '@/libs/constants/sns';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiInstagram } from 'react-icons/fi';
@@ -17,16 +19,16 @@ const Footer = () => {
             />
             <div className="flex flex-col">
               <p className="font-bold text-[#595959]">Westloke Amps</p>
-              <p className="font-normal text-[#595959]">
+              <Link href={westlokemusicEmail} className="font-normal text-[#595959]">
                 westlokemusic@gmail.com
-              </p>
+              </Link>
             </div>
           </div>
           <div className="flex gap-2 text-[#595959]">
             <FiInstagram className="text-xl mt-[3px]" />
             <div className="flex flex-col">
-              <Link href={'@tweedfreak'}>@tweedfreak</Link>
-              <Link href={'@tweedfreak'}>@westlokeamps</Link>
+              <Link href={tweedfreak}>@tweedfreak</Link>
+              <Link href={westlokeamps}>@westlokeamps</Link>
             </div>
           </div>
           <div className="flex gap-2 items-center text-[#595959] mb-8">

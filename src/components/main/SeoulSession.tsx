@@ -8,7 +8,7 @@ const SeoulSession = () => {
           <h2 className="text-bold text-4xl">Seoul Session</h2>
           <p>by Ryle Lee and Junu</p>
         </div>
-        <Link href={'/seoul-session'} className='Menu'>
+        <Link href={'/session/seoul'} className='Menu'>
           <button className="px-8 py-4 border border-white">
             Watch Video ▶
           </button>

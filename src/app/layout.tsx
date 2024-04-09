@@ -2,12 +2,12 @@ import '@/styles/globals.css';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import type { Metadata } from 'next';
+import { Poppins } from 'next/font/google';
 import SessionProvider from '@/components/SessionProvider';
 import StayTuned from '@/components/main/StayTuned';
 import { cn } from '@/utils/style';
-import type { Metadata } from 'next';
 import { getServerSession } from 'next-auth';
-import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({
   subsets: ['latin'],
