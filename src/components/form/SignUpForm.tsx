@@ -1,11 +1,12 @@
 'use client';
 
-import { signUpSchema } from '@/libs/validations/signUpSchema';
-import axios from 'axios';
 import { Form, Formik } from 'formik';
-import { useRouter } from 'next/navigation';
+
 import Button from '../Button';
 import InputFormik from '../InputFormik';
+import axios from 'axios';
+import { signUpSchema } from '@/libs/validations/signUpSchema';
+import { useRouter } from 'next/navigation';
 
 const SignUpForm = () => {
   const router = useRouter();
@@ -44,7 +45,7 @@ const SignUpForm = () => {
         }}
       >
         {({ isSubmitting, errors, touched }) => (
-          <Form className="flex flex-col gap-6">
+          <Form className="w-full max-w-[330px] flex flex-col gap-6">
             <InputFormik
               label="EMAIL"
               name={'email'}

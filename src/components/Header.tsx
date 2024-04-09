@@ -1,10 +1,11 @@
 'use client';
 
-import NavMenu from '@/libs/constants/navMenu';
-import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import NavMenu from '@/libs/constants/navMenu';
 import Profile from './Profile';
+import { cn } from '@/utils/style';
+import { useSession } from 'next-auth/react';
 
 const Header = () => {
   const { data: session, status } = useSession();
@@ -12,7 +13,7 @@ const Header = () => {
     <header className="bg-[#F3EEEA] py-6">
       <div className="container flex items-center justify-between">
         <div className="gap-20 items-center font-semibold text-sm hidden sm:flex">
-          <Link href={'/'} className='Menu'>
+          <Link href={'/'} className="Menu">
             <Image
               src={'/images/LogoRed.png'}
               width={100}
@@ -21,7 +22,7 @@ const Header = () => {
             />
           </Link>
           {NavMenu.map((menu, index) => (
-            <Link key={index} href={menu.url} className='Menu'>
+            <Link key={index} href={menu.url} className="Menu">
               {menu.menu}
             </Link>
           ))}
@@ -29,15 +30,15 @@ const Header = () => {
         {session ? (
           <Profile name={session.user.name} />
         ) : (
-          <div className="flex gap-10 items-center font-semibold text-sm">
-            <Link href={'/signin'} className='Menu'>Sign In</Link>
-            <Link
-              className="Menu border py-2 px-4 border-black rounded-full"
-              href={'/signup'}
-            >
-              Sign Up
-            </Link>
-          </div>
+          <Link
+            className={cn(
+              'border font-semibold text-sm py-2 px-4 border-black rounded-full',
+              'hover:bg-black hover:text-white'
+            )}
+            href={'/signin'}
+          >
+            Sign In
+          </Link>
         )}
       </div>
     </header>

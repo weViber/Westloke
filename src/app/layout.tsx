@@ -32,7 +32,7 @@ export default async function RootLayout({
         <SessionProvider session={session}>
           <div className="flex flex-1 flex-col">
             <Header />
-            <main className="flex flex-1 flex-col">
+            <main className="w-full flex flex-1 flex-col">
               {children}
               <StayTuned />
               <Footer />

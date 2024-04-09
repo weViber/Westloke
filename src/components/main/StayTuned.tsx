@@ -59,7 +59,12 @@ const StayTuned = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button className="px-16 h-12 bg-[#B50000] text-white">
+          <button
+            className={cn(
+              'px-16 h-12 bg-[#B50000] text-white',
+              'hover:bg-[#FF0000] ease-in-out duration-300 transition-all'
+            )}
+          >
             {loading ? <Spinner /> : 'Subscribe'}
           </button>
         </form>
