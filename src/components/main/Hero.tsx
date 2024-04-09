@@ -1,14 +1,15 @@
-import { cn } from '@/utils/style';
+import Image from 'next/image';
 import Link from 'next/link';
+import { cn } from '@/utils/style';
 
 const Hero = () => {
   return (
     <div className={cn('w-full min-h-screen', 'bg-[#F3EEEA]')}>
       <div
         className={cn(
-          'w-full h-full container flex flex-col items-center justify-between',
+          'w-full h-full max-w-[1920px] mx-auto flex flex-col items-center justify-between',
           'pt-16 pb-36',
-          "bg-[url('/images/MainBG.png')] bg-no-repeat bg-center bg-cover"
+          // "bg-[url('/images/MainBG.png')] bg-no-repeat bg-center bg-cover"
         )}
       >
         <div className="flex flex-col items-center gap-4">
@@ -17,6 +18,12 @@ const Hero = () => {
           </h2>
           <p className="text-base font-medium">Redmond,WA</p>
         </div>
+        <Image
+          src={'/images/MainModel.png'}
+          width={1200}
+          height={500}
+          alt="MainAmp"
+        />
         <div className="flex flex-col items-center gap-4">
           <Link
             href={'/amplifiers'}
