@@ -1,8 +1,8 @@
 'use client';
 
-import Foorplan from '@/components/main/Foorplan';
 import Hero from '@/components/main/Hero';
 import Location from '@/components/main/Location';
+import SeoulSession from '@/components/main/SeoulSession';
 import { useSession } from 'next-auth/react';
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       <Hero />
-      <Foorplan />
+      <SeoulSession />
       <Location />
     </main>
   );

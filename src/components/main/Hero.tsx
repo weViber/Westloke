@@ -1,29 +1,35 @@
-import Image from 'next/image';
+import { cn } from '@/utils/style';
 import Link from 'next/link';
-import { FaAngleRight } from 'react-icons/fa6';
 
 const Hero = () => {
   return (
-    <div className="min-h-screen flex flex-col py-24 justify-between relative w-full bg-[url('/images/Main.png')] bg-center">
-      <div className="container text-white">
-        <h2 className="text-4xl font-bold my-4">WESLOKE AMPS</h2>
-        <p className="text-xl font-medium">MADE IN REDMOND, WASHINGTON, USA</p>
-        <Link
-          href={'/amplifiers'}
-          className="flex items-center text-2xl font-bold my-12 transition-all ease-in-out hover:opacity-30"
-        >
-          <p>Shop Amplifiers</p>
-          <FaAngleRight />
-        </Link>
-      </div>
-
-      <div className="flex items-center justify-center">
-        <Image
-          src={'/images/LogoWhite.png'}
-          alt="user profile picture"
-          width={200}
-          height={0}
-        />
+    <div className={cn('w-full min-h-screen', 'bg-[#F3EEEA]')}>
+      <div
+        className={cn(
+          'w-full h-full container flex flex-col items-center justify-between',
+          'pt-16 pb-36',
+          "bg-[url('/images/MainBG.png')] bg-no-repeat bg-center bg-cover"
+        )}
+      >
+        <div className="flex flex-col items-center gap-4">
+          <h2 className="pretendard text-6xl font-[500] tracking-tighter">
+            Westloke Amps
+          </h2>
+          <p className="text-base font-medium">Redmond,WA</p>
+        </div>
+        <div className="flex flex-col items-center gap-4">
+          <Link
+            href={'/amplifiers'}
+            className="flex items-center text-2xl font-bold transition-all ease-in-out hover:opacity-30"
+          >
+            <p>Model 6</p>
+          </Link>
+          <div className="flex items-center justify-center gap-6">
+            <p>Lifetime Warranty for Amp itself</p>
+            <p>|</p>
+            <p>5 Years Warranty for the Tubes</p>
+          </div>
+        </div>
       </div>
     </div>
   );

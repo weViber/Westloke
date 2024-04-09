@@ -1,11 +1,13 @@
+import '@/styles/globals.css';
+
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import SessionProvider from '@/components/SessionProvider';
+import StayTuned from '@/components/main/StayTuned';
 import { cn } from '@/utils/style';
 import type { Metadata } from 'next';
 import { getServerSession } from 'next-auth';
 import { Poppins } from 'next/font/google';
-import './globals.css';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -32,6 +34,7 @@ export default async function RootLayout({
             <Header />
             <main className="flex flex-1 flex-col">
               {children}
+              <StayTuned />
               <Footer />
             </main>
           </div>

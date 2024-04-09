@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     screens: {
       sm: '768px',
-      lg: '1280px',
+      lg: '1040px',
     },
     extend: {
       backgroundImage: {
@@ -21,9 +21,7 @@ const config: Config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
+        DEFAULT: '20px',
       },
     },
   },

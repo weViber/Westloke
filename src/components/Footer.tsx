@@ -5,12 +5,12 @@ import { IoLocationSharp } from 'react-icons/io5';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F0F0F0] py-20">
+    <footer className="bg-white py-20">
       <div className="container ">
-        <div className="flex justify-between border-b pb-8 border-[#595959]">
-          <div className="flex gap-4 pb-4">
+        <div className="flex justify-between">
+          <div className="flex gap-8">
             <Image
-              src={'/images/LogoRed.png'}
+              src={'/images/LogoGray.png'}
               alt="Logo"
               width={130}
               height={0}
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="py-6">
-          <p className="text-[#8A8A8A] text-lg font-medium">ⒸWestloke 2023</p>
+          <p className="text-[#8A8A8A] text-sm font-medium">Ⓒ2024 Westloke Amps. All right reserved.</p>
         </div>
       </div>
     </footer>
